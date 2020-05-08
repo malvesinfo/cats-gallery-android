@@ -33,6 +33,8 @@ class PhotoGridAdapter : RecyclerView.Adapter<PhotoGridAdapter.PhotoGridViewHold
             with(itemView) {
                 Glide.with(this)
                     .load(item.imageUrl)
+                    .placeholder(R.drawable.ic_photo_placeholder)
+                    .error(R.drawable.ic_photo_placeholder)
                     .into(imagePhoto)
             }
         }

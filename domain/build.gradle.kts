@@ -14,6 +14,7 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", "\"https://api.imgur.com/3/\"")
         buildConfigField("String", "CLIENT_ID", "\"Client-ID 1ceddedc03a5d71\"")
     }
 
