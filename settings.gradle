@@ -1,0 +1,6 @@
+rootProject.name='cats-gallery'
+include ':app'
+include ':features:home'
+include ':domain'
+include ':core'
+include ':components:photo-grid'

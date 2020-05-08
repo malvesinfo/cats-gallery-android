@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maalves.cats.home">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CoreTheme.Base.Fullscreen" />
+    </application>
+</manifest>

@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="CoreTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="CoreTheme" parent="CoreTheme.Base" />
+
+    <style name="CoreTheme.Base.Fullscreen" parent="CoreTheme.Base">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+</resources>

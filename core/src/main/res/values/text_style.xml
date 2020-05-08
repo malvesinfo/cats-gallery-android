@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextStyleRobotoNormal">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextStyleNormal">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextStyleMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextStyleRegular">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextStyleBold">
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="TextStyleLight">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextSplashAppName" parent="TextStyleBold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+</resources>
