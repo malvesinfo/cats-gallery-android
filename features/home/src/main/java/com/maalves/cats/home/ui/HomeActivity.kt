@@ -3,6 +3,7 @@ package com.maalves.cats.home.ui
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.maalves.cats.core.hide
 import com.maalves.cats.core.show
@@ -22,15 +23,20 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        loadData()
+        configView()
+    }
 
+    private fun loadData() {
         viewModel.fetchCats().observe(this, Observer {
             when (it) {
                 is Response.Loading -> {
-                    progress.show()
+                    swipeRefreshLayout?.isRefreshing = true
+                    textError.hide()
                 }
 
                 is Response.Success -> {
-                    progress.hide()
+                    swipeRefreshLayout?.isRefreshing = false
                     photoGridView.setData(
                         it.data?.map { cat ->
                             PhotoGridItem(cat.photosUrl.firstOrNull().orEmpty())
@@ -39,9 +45,19 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 is Response.Error -> {
-                    progress.hide()
+                    swipeRefreshLayout?.isRefreshing = false
+                    textError.show()
                 }
             }
         })
     }
+
+    private fun configView() {
+        val color = ContextCompat.getColor(this, R.color.colorPrimary)
+        swipeRefreshLayout.setColorSchemeColors(color, color, color)
+        swipeRefreshLayout.setOnRefreshListener {
+            loadData()
+        }
+    }
+
 }

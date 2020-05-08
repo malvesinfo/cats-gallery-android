@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_fetch_error">Erro ao carregar os dados. Por favor tente novamente</string>
+</resources>

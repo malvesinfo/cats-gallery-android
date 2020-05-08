@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true">
 
@@ -30,20 +32,30 @@
                 android:text="@string/app_name" />
         </FrameLayout>
 
-        <com.maalves.cats.photogrid.PhotoGridView
-            android:id="@+id/photoGridView"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_height="match_parent">
 
+            <com.maalves.cats.photogrid.PhotoGridView
+                android:id="@+id/photoGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <ProgressBar
-        android:id="@+id/progress"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textError"
+        style="@style/TextErrorMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:indeterminateTint="@color/colorAccent"
-        android:visibility="gone" />
+        android:gravity="center"
+        android:text="@string/home_fetch_error"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

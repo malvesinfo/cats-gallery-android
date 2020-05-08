@@ -44,6 +44,7 @@ dependencies {
     api(AndroidX.activity)
     api(AndroidX.reactiveStreams)
     api(AndroidX.recyclerView)
+    api(AndroidX.swipeRefresh)
     api(UI.material)
     api(UI.glide)
 

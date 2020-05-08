@@ -31,6 +31,7 @@ object AndroidX {
         const val ktx = "1.2.0"
         const val lifecycle = "2.0.0"
         const val recyclerView = "1.0.0"
+        const val swipeRefresh = "1.0.0"
     }
 
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
@@ -39,6 +40,7 @@ object AndroidX {
 
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val recyclerView = "androidx.recyclerview:recyclerview-selection:${Versions.recyclerView}"
+    const val swipeRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swipeRefresh}"
 
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktx}"
 
