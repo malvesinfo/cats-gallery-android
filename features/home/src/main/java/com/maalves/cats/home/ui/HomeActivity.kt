@@ -31,12 +31,12 @@ class HomeActivity : AppCompatActivity() {
         viewModel.fetchCats().observe(this, Observer {
             when (it) {
                 is Response.Loading -> {
-                    swipeRefreshLayout?.isRefreshing = true
+                    swipeRefreshLayout.isRefreshing = true
                     textError.hide()
                 }
 
                 is Response.Success -> {
-                    swipeRefreshLayout?.isRefreshing = false
+                    swipeRefreshLayout.isRefreshing = false
                     photoGridView.setData(
                         it.data?.map { cat ->
                             PhotoGridItem(cat.photosUrl.firstOrNull().orEmpty())
@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 is Response.Error -> {
-                    swipeRefreshLayout?.isRefreshing = false
+                    swipeRefreshLayout.isRefreshing = false
                     textError.show()
                 }
             }
